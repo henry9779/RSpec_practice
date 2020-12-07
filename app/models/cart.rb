@@ -1,5 +1,5 @@
 class Cart
-  attr_reader :item # 讓內外部可以存取 initialize 的實體變數
+  attr_reader :item # 讓內外部可以存取 initialize 的實體變數???
 
   def initialize
     @item = [] # 初始化給一個空陣列
