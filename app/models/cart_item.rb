@@ -1,7 +1,7 @@
 class CartItem
   attr_reader :product_id, :quantity # 方便外部取用????
 
-  def initalize(product_id, quantity = 1) # 初始化時收兩兩個參數
+  def initialize(product_id, quantity = 1) # 初始化時收兩個參數
     @product_id = product_id
     @quantity = quantity
   end
