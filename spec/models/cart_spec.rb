@@ -14,8 +14,8 @@ RSpec.describe Cart, type: :model do
       5.times { cart.add_item(2) } # 放編號2商品5次
       2.times { cart.add_item(3) } # 放編號3商品2次
       expect(cart.items.length).to be 3 # 預期購物車會有3樣商品
-      expect(cart.items.frist.quantity).to be 3 # 預期第一樣商品數量為3
-      expect(cart.items.seconde.quantity).to be 5 # 預期第二樣商品數量為5
+      expect(cart.items.first.quantity).to be 3 # 預期第一樣商品數量為3
+      expect(cart.items.second.quantity).to be 5 # 預期第二樣商品數量為5
     end
 
     it "商品可以放到購物車裡，也可以再拿出來" do
@@ -26,7 +26,7 @@ RSpec.describe Cart, type: :model do
       4.times { cart.add_item(p1.id) } # 放入4次商品一
       2.times { cart.add_item(p2.id) } # 放入2次商品二
 
-      expect(cart.items.frist.product_id).to be p1.id # 第一個item商品id應該為一號商品id
+      expect(cart.items.first.product_id).to be p1.id # 第一個item商品id應該為一號商品id
       expect(cart.items.seconed.product_id).to be p2.id # 第二個item商品id應該為二號商品id
       expect(cart.items.frist.product).to be_a Product # 第一個item拿出來應該是商品
     end

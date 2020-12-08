@@ -9,4 +9,9 @@ class CartItem
   def increment(n = 1) # 接收新增的數量，預設為1
     @quantity += n
   end
+
+  def product
+    Product.find_by(id: product_id)
+  end
+
 end
